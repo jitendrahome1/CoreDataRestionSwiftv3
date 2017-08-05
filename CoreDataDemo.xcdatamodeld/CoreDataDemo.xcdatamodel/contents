@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15G31" minimumToolsVersion="Xcode 7.0">
+    <entity name="Employees" representedClassName=".Employees" syncable="YES">
+        <attribute name="empAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="empName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mangEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rEmployee" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="Manager" inverseName="rManager" inverseEntity="Manager" syncable="YES"/>
+    </entity>
+    <entity name="Manager" representedClassName=".Manager" syncable="YES">
+        <attribute name="mangAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mangEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mangPassword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mangPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rManager" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Employees" inverseName="rEmployee" inverseEntity="Employees" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Employees" positionX="-3188" positionY="-711" width="128" height="120"/>
+        <element name="Manager" positionX="-3420" positionY="-577" width="128" height="120"/>
+    </elements>
+</model>
